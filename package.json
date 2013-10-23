@@ -1,0 +1,14 @@
+{
+	"name": "test-cordova-cli",
+	"version": "0.0.1",
+	"description": "Test the cordova command line tool",
+	"main": "test-cordova-cli",
+	"engines": {
+		"node": ">=0.9.9"
+	},
+	"engineStrict": true,
+	"dependencies": {
+		"cordova": "git+https://github.com/gabrielschulhof/cordova-cli.git#tizen"
+	},
+	"author": "Gabriel Schulhof"
+}
