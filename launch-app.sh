@@ -17,4 +17,5 @@ sleep 1
 echo "Launching app and grabbing port ..."
 inspector_port=$( wrt-launcher -s "$app_id" -d | grep '^port: ' | awk '{ print $2; }' )
 
+# Change the ssh command below to reflect your username
 ssh -t nix@"$host_ip" bash -c "'( set -x; echo "'"'"hostfwd_remove ::10123"'"'" | socat unix:/tmp/qemu.sock -; echo "'"'"hostfwd_add ::10123-:$inspector_port"'"'" | socat unix:/tmp/qemu.sock - )'"
